@@ -1,7 +1,7 @@
 const FeedbackSchema = require('../models/feedback.js')
 
 const createFeedback = async(req,res) => {
-    console.log('geldi buraya')
+    console.log('process', process.env.MONGO_URI)
     try {
         console.log('req', req.body.companyId)
         const newFeedback = await FeedbackSchema.create(req.body)
